@@ -110,3 +110,15 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 })
+
+const bell = document.getElementById('bell');
+const dot = document.getElementById('dot');
+const menu = document.getElementById('myDropdown');
+
+bell.addEventListener('click', (e) => {
+    const element = e.target;
+    if ( element.classList.contains('bell-svg') ) {
+        dot.style.display = 'none';
+        menu.style.display = 'block';
+    }
+})
