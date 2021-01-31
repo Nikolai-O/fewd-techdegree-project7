@@ -32,6 +32,12 @@ ul li {
     display: inline-block;
 }
 
+.traffic-nav-link {
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
 .alert {
     padding: 10px;
     margin: 10px 10px 10px 10px;
@@ -41,42 +47,46 @@ ul li {
     border-radius: 5px;
   }
 
-  .alert p {
-      display: inline;
-  }
+.alert p {
+    display: inline;
+}
 
-  .alert-banner-close {
-      float: right;
-      margin: 0;
-  }
-  
-  /* The close button */
-  .close-button {
-    padding-right: 5px;
-    color: black;
-    font-weight: bold;
+.alert-banner-close {
     float: right;
-    font-size: 22px;
-    line-height: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .close-button:hover {
-    color: white;
-  }
+    margin: 0;
+}
 
-  .widget-container-full {
-      width: 95%;
-      margin: auto;
-      margin-bottom: 20px;
-  }
+textarea {
+    resize: none;
+}
 
-  .widget-container-half {
+/* The close button */
+.close-button {
+padding-right: 5px;
+color: black;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 10px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.close-button:hover {
+color: white;
+}
+
+.widget-container-full {
     width: 95%;
     margin: auto;
     margin-bottom: 20px;
+}
+
+.widget-container-half {
+width: 95%;
+margin: auto;
+margin-bottom: 20px;
 }
 
 .notification {
@@ -161,18 +171,35 @@ ul li {
     border-bottom: 1px solid lightgrey;
 }
 
+.traffic-header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+        "title nav";
+}
+
 .traffic h3 {
     float: left;
     padding-left: 5px;
+    /* max-width: 25%; */
+    grid-area: title;
 }
 
 .traffic-nav {
     float: right;
+    margin-right: 20px;
+    grid-area: nav;
+}
+
+.traffic-nav {
+    display: flex;
+    /* max-width: 75%; */
+    /* min-width: 300px; */
 }
 
 .traffic-nav > li {
-    float: left;
-    margin-right: 43px;
+    /* float: left; */
+    /* margin-right: 43px; */
     cursor: pointer;
 }
 
@@ -217,7 +244,7 @@ ul li {
 .grid {
     height: 100vh;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "header"
@@ -302,8 +329,6 @@ ul li {
     display: block;
     min-width: 50%;
 }
-
-
 
 .social-stats {
     display: flex;
@@ -557,6 +582,9 @@ ul li {
 }
 
 @media (min-width: 1024px) {
+    .traffic-header {
+        grid-template-columns: 40% 60%;
+    }
 
     .widget-container-half {
         width: 90%;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="toggle-switch.css">
+    <link rel="stylesheet" href="autocomplete.css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>WebApp Dashboard</title>
@@ -84,10 +85,10 @@
             <div class="traffic-header">
                 <h3>Traffic</h3>
                 <ul class="traffic-nav">
-                    <li class="traffic-nav-link">Hourly</li>
-                    <li class="traffic-nav-link">Daily</li>
-                    <li class="traffic-nav-link active">Weekly</li>
-                    <li class="traffic-nav-link">Monthly</li>
+                    <li id="hourly" class="traffic-nav-link">Hourly</li>
+                    <li id="daily" class="traffic-nav-link">Daily</li>
+                    <li id="weekly" class="traffic-nav-link active">Weekly</li>
+                    <li id="monthly" class="traffic-nav-link">Monthly</li>
                 </ul>
             </div>
             <div class="widget-container-full">
@@ -260,7 +261,7 @@
             <h3>Settings</h3>
 
             <label class="switch-light switch-material" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="email-box">
                 
                 <strong class="settings-option">
                     Send Email Notifications
@@ -274,7 +275,7 @@
             </label>
 
             <label class="switch-light switch-material" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="public-box">
                 
                 <strong class="settings-option">
                     Set Profile to Public
@@ -300,6 +301,7 @@
         </section>
         <script src="chart.js"></script>
         <script src="app.js"></script>
+        <script src="autocomplete.js"></script>
     </main>
 </body>
 </html>
