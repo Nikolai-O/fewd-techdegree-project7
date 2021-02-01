@@ -236,7 +236,10 @@ if ( window.localStorage.getItem('public') ) {
 
 save.addEventListener('click', () => {
     window.localStorage.setItem('timezone', timezone.value);
-    if ( emailBox.checked ) {
+    if ( emailBox.checked && publicBox.checked ) {
+        window.localStorage.setItem('email', 'true');
+        window.localStorage.setItem('public', 'true');
+    } else if ( emailBox.checked ) {
         window.localStorage.setItem('email', 'true');
     } else if ( publicBox.checked ) {
         window.localStorage.setItem('public', 'true');

@@ -541,11 +541,6 @@ margin-bottom: 20px;
         "image info"
 }
 
-@media (max-width: 767px) {
-    
-
-}
-
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: 50px auto;
